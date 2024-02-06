@@ -3,7 +3,7 @@ let index = 1;
 
 const addTodo = () => {
     const inputString = document.querySelector(".input-text").value;
-    if (!inputString)
+    if (!inputString || index === 9)
         return;
     console.log(inputString);
     let todoElem = document.createElement("div");
@@ -18,7 +18,10 @@ const addTodo = () => {
     `
     const parentDiv = document.querySelector(".main-container");
     parentDiv.appendChild(todoElem);
-    document.querySelector(".input-text").value = "";
+	setTimeout(() => {
+		todoElem.style.transform = 'scale(1)';
+	}, 10); // Un délai de 10ms
+	document.querySelector(".input-text").value = "";
     index++;
 }
 
