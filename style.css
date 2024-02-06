@@ -103,3 +103,9 @@ body {
     align-items: center;
     justify-content: space-around;
 }
+
+.todo ul li:nth-child(2){
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+}
